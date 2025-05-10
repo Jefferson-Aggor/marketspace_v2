@@ -48,6 +48,7 @@ const navbarItems = [
 export const Navbar = () => {
     const pathname = usePathname()
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+    const actionBtnClass = "border-l border-t-0 border-r-0 px-12 h-full transition-colors text-lg rounded-none"
 
     return (
         <nav className="h-20 flex border-b justify-between font-medium bg-white">
@@ -73,14 +74,12 @@ export const Navbar = () => {
                 <Button
                     asChild
                     variant="secondary"
-                    className="border-l border-t-0 border-r-0 px-12 h-full
-                    rounded-none hover:bg-pink-400 transition-colors text-lg">
+                    className={cn("hover:bg-pink-400", actionBtnClass)}>
                     <Link href='/sign-in'>Login</Link>
                 </Button>
                 <Button
                     asChild
-                    className="border-l border-t-0 border-r-0 px-12 h-full bg-black rounded-none
-                 hover:bg-pink-400 hover:text-black transition-colors text-lg">
+                    className={cn("hover:bg-pink-400 hover:text-black", actionBtnClass)}>
                     <Link href='/sign-up'>Start selling</Link>
                 </Button>
             </div>

@@ -11,7 +11,9 @@ const Layout = ({ children }: Props) => {
             <div className="flex-1 bg-[#f4f4f0]">
                 {children}
             </div>
-            <footer className="flex justify-between border-t p-6 text-gray-700">Marketspace, Inc</footer>
+            <footer className="border-t p-6 text-gray-700 text-center">
+                © {new Date().getFullYear()} Marketspace, Inc. All rights reserved.
+            </footer>
         </div>
     )
 }
