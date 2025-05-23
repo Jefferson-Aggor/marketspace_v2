@@ -53,7 +53,7 @@ export const Navbar = () => {
     return (
         <nav className="h-20 flex border-b justify-between font-medium bg-white">
             <Link href='/' className="pl-6 flex items-center">
-                <span className={cn("text-5xl font-semibold", poppins.className)}>MarketSpace<span className="text-pink-400">.</span></span>
+                <span className={cn("text-5xl font-semibold", poppins.className)}>Ivy<span className="text-pink-400">.</span></span>
             </Link>
 
             <div className="items-center gap-2 hidden lg:flex">

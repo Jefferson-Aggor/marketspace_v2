@@ -20,10 +20,6 @@ export const Categories: CollectionConfig = {
             type: 'text'
         },
         {
-            name: 'textColor',
-            type: 'text',
-        },
-        {
             name: 'parent',
             type: 'relationship',
             relationTo: 'categories',
