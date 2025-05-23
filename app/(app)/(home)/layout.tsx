@@ -45,7 +45,7 @@ const Layout = async ({ children }: Props) => {
                 {children}
             </div>
             <footer className="border-t p-6 text-gray-700 text-center">
-                © {new Date().getFullYear()} Marketspace, Inc. All rights reserved.
+                © {new Date().getFullYear()} Ivy, Inc. All rights reserved.
             </footer>
         </div>
     )

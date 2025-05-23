@@ -1,13 +1,14 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { useEffect, useRef, useState } from "react"
 
-import { act, useEffect, useRef, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+import { ListFilter } from "lucide-react"
+
 import { CategoryDropdown } from "./categories-dropdown"
 import { CustomCategory } from "../types"
-import { cn } from "@/lib/utils"
-import { ListFilter } from "lucide-react"
 import { CategorySidebar } from "./category-sideBar"
-
 
 interface CategoriesProps {
     data: CustomCategory[]
@@ -24,9 +25,6 @@ export const Categories = ({ data }: CategoriesProps) => {
     const activeCategory = 'all'
     const activeCategoryIndex = data.findIndex((category) => category.slug === activeCategory)
     const isActiveCategoryHidden = activeCategoryIndex >= visibleCount && activeCategoryIndex !== -1
-
-
-
 
     useEffect(() => {
         const calculateVisible = () => {
@@ -63,7 +61,7 @@ export const Categories = ({ data }: CategoriesProps) => {
             <CategorySidebar
                 open={isSidebarOpen}
                 data={data}
-                openChange={() => setIsSidebarOpen(!isSidebarOpen)} />
+                openChange={setIsSidebarOpen} />
 
             {/* Hidden items to measure */}
             <div

@@ -1,3 +1,8 @@
+'use client'
+import { useState } from "react"
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
+
 import {
     Sheet,
     SheetContent,
@@ -7,9 +12,6 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area"
 
 import { CustomCategory } from "../types"
-import { useState } from "react"
-import { ChevronLeft, ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
-import { useRouter } from "next/navigation"
 
 interface Props {
     open: boolean,
@@ -93,8 +95,6 @@ export const CategorySidebar = ({ open, data, openChange }: Props) => {
                         </button>
                     ))}
                 </ScrollArea>
-
-
             </SheetContent>
         </Sheet>
 
