@@ -166,7 +166,6 @@ export interface Category {
   name: string;
   slug: string;
   color?: string | null;
-  textColor?: string | null;
   parent?: (string | null) | Category;
   subcategories?: {
     docs?: (string | Category)[];
@@ -292,7 +291,6 @@ export interface CategoriesSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   color?: T;
-  textColor?: T;
   parent?: T;
   subcategories?: T;
   updatedAt?: T;
